@@ -1,19 +1,13 @@
-import React from 'react';
+const Player = ({name, number}) => {
 
-class Player extends React.Component {
+    const { name, number } = this.props
 
-    render() {
-
-        const { name, number } = this.props
-
-        return (
-            <div style={{marginBottom: '20px'}}>
-                <div>{name}</div>
-                <div>{number}</div>
-            </div>
-        )
-    }
-
+    return (
+        <div style={{marginBottom: '20px'}}>
+            <div>{name}</div>
+            <div>{number}</div>
+        </div>
+    )
 }
 
 export default Player
