@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Outlet, useOutlet, useLocation } from "react-router-dom"
-import { useQuery } from "react-query"
+import { useQuery } from "@tanstack/react-query"
 
 import List from "./List"
 
