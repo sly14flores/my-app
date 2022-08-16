@@ -17,7 +17,7 @@ const Groups = () => {
   const [pagination, setPagination] = useState({})
 
   const csrf = useQuery(['csrfToken'], csrfToken)
-  const results = useQuery(['groupsList', currentPage, filters], () => getRecords({ page: currentPage, filters }), {
+  useQuery(['groupsList', currentPage, filters], () => getRecords({ page: currentPage, filters }), {
     enabled: csrf?.isSuccess,
     keepPreviousData : true,
     onSuccess: (res) => {

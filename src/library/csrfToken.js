@@ -1,9 +1,9 @@
 import axios from "axios";
-import { apiUrl } from "../constants/url";
+import { beUrl } from "../constants/url";
 
 const csrfToken = () => {
 
-  return axios.get(`${apiUrl}/sanctum/csrf-cookie`)
+  return axios.get(`${beUrl}/sanctum/csrf-cookie`)
 
 }
 
