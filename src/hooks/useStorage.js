@@ -1,8 +1,8 @@
 const initStorage = {
-  id: null,
-  firstname: null,
-  lastname: null,
-  token: null
+  id: '',
+  firstname: '',
+  lastname: '',
+  token: ''
 }
 const appKey = 'myAppDemo'
 
@@ -10,11 +10,8 @@ const useStorage = () => {
 
   const get = () => {
 
-    let storage = localStorage.getItem(appKey)
-    console.log(storage)
-    if (storage === 'undefined' || storage === null) {
-      storage = initStorage
-    }
+    let storage = (localStorage.getItem(appKey)===null)?initStorage:JSON.parse(localStorage.getItem(appKey))
+
     return storage
 
   }
