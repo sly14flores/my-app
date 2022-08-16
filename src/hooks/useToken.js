@@ -1,5 +1,6 @@
 import axios from 'axios'
 import useStorage from './useStorage'
+import { apiUrl } from '../constants/url'
 
 const useToken = () => {
 
@@ -22,6 +23,15 @@ const useToken = () => {
       return config;
   
   });
+
+//   axios.interceptors.request.use(request => {
+
+//     axios.get(`${apiUrl}/sanctum/csrf-cookie`).then(response => {
+//         console.log(response)
+//     });
+
+//     return request;
+//   })
   
   /**
    * Validation sequence
