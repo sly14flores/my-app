@@ -1,5 +1,5 @@
 // Setup Routing
-
+import useToken from './hooks/useToken'
 import loadable from '@loadable/component'
 
 import {
@@ -14,6 +14,8 @@ const NewGroup = loadable(() => import('./pages/Groups/New'))
 const EditGroup = loadable(() => import('./pages/Groups/Edit'))
 
 const App = () => {
+
+  useToken()
 
   return (
     <>
