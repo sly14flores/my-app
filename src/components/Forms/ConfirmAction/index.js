@@ -1,4 +1,3 @@
-import { current } from '@reduxjs/toolkit';
 import React, { useRef, useEffect } from 'react';
 import Transition from '../../../utils/Transition';
 
